@@ -1,0 +1,27 @@
+<?php
+	/**
+	 * @var $templates
+	 * @var $userTemplate
+	 * @var $userMetaKey
+	 */
+?>
+
+<h3><?php echo __( 'WCPDF User Template' ); ?></h3>
+
+<table class="form-table">
+	<tr>
+		<th><label for="<?php echo $userMetaKey; ?>"><?php echo __( 'Template' ); ?></label></th>
+		<td>
+			<select name="<?php echo $userMetaKey; ?>" id="<?php echo $userMetaKey; ?>">
+				<option value=""><?php echo __( 'None' ); ?></option>
+
+				<?php if ( ! empty ( $templates ) ) : ?>
+					<?php foreach( $templates as $template ) : ?>
+						<option value="<?php echo $template; ?>"<?php echo ( ! empty ( $userTemplate ) && $userTemplate === $template ? ' selected="selected"' : '' ); ?>><?php echo $template; ?></option>
+					<?php endforeach; ?>
+				<?php endif; ?>
+			</select>
+			<span class="description"><?php _e("Select the template for this user."); ?></span>
+		</td>
+	</tr>
+</table>

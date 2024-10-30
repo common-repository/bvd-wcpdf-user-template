@@ -1,0 +1,14 @@
+.bvd-wcpdf-user-template-admin-settings input[type=text],
+.bvd-wcpdf-user-template-admin-settings input[type=number],
+.bvd-wcpdf-user-template-admin-settings input[type=password] {
+	width: 100%;
+	max-width: 650px;
+}
+
+.m-t-40 {
+	margin-top: 40px;
+}
+
+.m-t-0 {
+	margin-top: 0;
+}

@@ -1,0 +1,20 @@
+<?php
+	namespace BvdWcpdfUserTemplate;
+
+	// @ToDo: I dont know what settings could be use full. But this file will probably be extended.
+?>
+
+<div class="wrap">
+	<h1><?php _e( 'User template settings' );?></h1>
+
+	<strong class="m-t-40"><?php print __( 'Current templates within: ' . General\Templates::get_instance()->returnChildThemeTemplatePath() ); ?>:</strong>
+	<p class="m-t-0"><?php print implode(' </br>',General\Templates::get_instance()->getTemplatesFromChildTheme() ); ?></p>
+
+	<!--<form action="options.php" method="post" class="bvd-wcpdf-user-template-settings">-->
+		<?php //settings_fields( 'bvd_wcpdf_user_template_settings' ); ?>
+
+		<?php //do_settings_sections( 'bvd_wcpdf_user_template_settings' ); ?>
+
+		<?php //submit_button(); ?>
+	<!--</form>-->
+</div>
